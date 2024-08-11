@@ -81,8 +81,9 @@ export default function Contact() {
             </ul>
           </div>
           <p className="text-neutral-300 mt-6 relative z-20 text-sm">
-            I'm always open to new opportunities and collaborations. Don't hesitate to reach out!
+            I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
           </p>
+
         </CardSpotlight>
       </div>
     </section>
