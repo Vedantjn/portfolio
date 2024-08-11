@@ -62,15 +62,10 @@ export default function Contact() {
                 link="mailto:vedant.jain.indore@gmail.com"
               />
               <ContactItem 
-                icon={<PhoneIcon />}
-                title="Phone"
-                value="(+91) 8602503990"
-              />
-              <ContactItem 
                 icon={<LinkedInIcon />}
                 title="LinkedIn"
-                value="linkedin.com/in/yourlinkedin"
-                link="https://linkedin.com/in/yourlinkedin"
+                value="https://www.linkedin.com/in/vedant-jain-192915194/"
+                link="https://www.linkedin.com/in/vedant-jain-192915194/"
               />
               <ContactItem 
                 icon={<GitHubIcon />}

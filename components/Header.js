@@ -27,10 +27,10 @@ export default function Header() {
       <h1 className="text-5xl font-bold mt-8 mb-4 text-white">Vedant Jain</h1>
       <p className="text-2xl text-gray-300 mb-8">MERN & Blockchain Developer</p>
       <div className="flex justify-center">
-        <SocialLink href="https://github.com/yourgithub" text="GitHub" />
-        <SocialLink href="https://leetcode.com/yourleetcode" text="LeetCode" />
-        <SocialLink href="https://linkedin.com/in/yourlinkedin" text="LinkedIn" />
-        <SocialLink href="https://linkedin.com/in/yourlinkedin" text="Resume" />
+        <SocialLink href="https://github.com/Vedantjn" text="GitHub" />
+        <SocialLink href="https://leetcode.com/u/nirmohi7/" text="LeetCode" />
+        <SocialLink href="https://www.linkedin.com/in/vedant-jain-192915194/" text="LinkedIn" />
+        <SocialLink href="https://drive.google.com/drive/folders/1ie4iOSIMgjMqZor9rVxFVLLPOdOXFiNu?usp=sharing" text="Resume" />
       </div>
     </header>
   );
