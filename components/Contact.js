@@ -75,7 +75,7 @@ export default function Contact() {
               <ContactItem 
                 icon={<GitHubIcon />}
                 title="GitHub"
-                value="github.com/Veadntjn"
+                value="github.com/Vedantjn"
                 link="https://github.com/Vedantjn"
               />
             </ul>
