@@ -8,9 +8,9 @@ const ContactItem = ({ icon, title, value, link }) => (
     <p className="text-white">
       <strong>{title}:</strong>{' '}
       {link ? (
-        <LinkPreview url={link} className="font-bold">
+        <a href={link} className="font-bold" target="_blank" rel="noopener noreferrer">
           {value}
-        </LinkPreview>
+        </a>
       ) : (
         value
       )}
