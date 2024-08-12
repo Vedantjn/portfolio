@@ -8,9 +8,13 @@ const ContactItem = ({ icon, title, value, link }) => (
     <p className="text-white">
       <strong>{title}:</strong>{' '}
       {link ? (
-        <a href={link} className="font-bold" target="_blank" rel="noopener noreferrer">
+        <LinkPreview 
+          url={link} 
+          className="font-bold"
+          openInNewTab={true}
+        >
           {value}
-        </a>
+        </LinkPreview>
       ) : (
         value
       )}
@@ -78,7 +82,6 @@ export default function Contact() {
           <p className="text-neutral-300 mt-6 relative z-20 text-sm">
             I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
           </p>
-
         </CardSpotlight>
       </div>
     </section>

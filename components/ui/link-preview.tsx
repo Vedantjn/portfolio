@@ -20,6 +20,7 @@ type LinkPreviewProps = {
   height?: number;
   quality?: number;
   layout?: string;
+  openInNewTab?: boolean;
 } & (
   | { isStatic: true; imageSrc: string }
   | { isStatic?: false; imageSrc?: never }
@@ -35,6 +36,7 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
+  openInNewTab = false,
 }: LinkPreviewProps) => {
   let src;
   if (!isStatic) {
@@ -70,7 +72,7 @@ export const LinkPreview = ({
   const handleMouseMove = (event: any) => {
     const targetRect = event.target.getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
@@ -100,9 +102,15 @@ export const LinkPreview = ({
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
           className={cn("text-black dark:text-white", className)}
-          href={url}
+          asChild
         >
-          {children}
+          <a 
+            href={url}
+            target={openInNewTab ? "_blank" : undefined}
+            rel={openInNewTab ? "noopener noreferrer" : undefined}
+          >
+            {children}
+          </a>
         </HoverCardPrimitive.Trigger>
 
         <HoverCardPrimitive.Content
@@ -135,6 +143,8 @@ export const LinkPreview = ({
                   href={url}
                   className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
+                  target={openInNewTab ? "_blank" : undefined}
+                  rel={openInNewTab ? "noopener noreferrer" : undefined}
                 >
                   <Image
                     src={isStatic ? imageSrc : src}
