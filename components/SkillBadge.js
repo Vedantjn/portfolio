@@ -17,17 +17,17 @@ const SkillCard = ({ skill, image }) => (
 
 export function Skills() {
   const skills = [
-    { name: "Solidity", image: "/images/skills/solidity.png" },
-    { name: "Ethereum", image: "/images/skills/ethereum.png" },
+    { name: "MongoDB", image: "/images/skills/mongodb.png" },
+    { name: "ExpressJS", image: "/images/skills/express.png" },
+    { name: "ReactJS", image: "/images/skills/react.png" },
+    { name: "NodeJS", image: "/images/skills/nodejs.png" },
     { name: "C++", image: "/images/skills/cpp.png" },
     { name: "HTML", image: "/images/skills/html.png" },
     { name: "CSS", image: "/images/skills/css.png" },
     { name: "JavaScript", image: "/images/skills/javascript.png" },
+    { name: "Solidity", image: "/images/skills/solidity.png" },
+    { name: "Ethereum", image: "/images/skills/ethereum.png" },
     { name: "SQL", image: "/images/skills/sql.png" },
-    { name: "ReactJS", image: "/images/skills/react.png" },
-    { name: "ExpressJS", image: "/images/skills/express.png" },
-    { name: "NodeJS", image: "/images/skills/nodejs.png" },
-    { name: "MongoDB", image: "/images/skills/mongodb.png" },
     { name: "PostgreSQL", image: "/images/skills/postgresql.png" },
   ];
 
