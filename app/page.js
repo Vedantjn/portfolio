@@ -75,8 +75,8 @@ function About() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
         <p className="text-xl text-center max-w-3xl mx-auto">
-          I&apos;m a passionate Blockchain Developer and Computer Engineering student. 
-          I love working on cutting-edge technologies and solving complex problems.
+          I&apos;m a passionate MERN and Blockchain developer. 
+          I love working on cutting-edge technologies and solving complex problems. I also like solving data structures and algorithms related problems using C++.
         </p>
       </div>
     </section>
