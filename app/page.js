@@ -51,6 +51,7 @@ function Projects() {
       image: "/images/dice-game.png",
       links: {
         github: "https://github.com/yourgithub/dice-game",
+        live: "https://cute-sunflower-d33fbf.netlify.app/"
       }
     }
   ]
