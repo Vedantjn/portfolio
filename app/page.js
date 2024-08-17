@@ -64,6 +64,16 @@ function Projects() {
         live: "https://google-keep-clone-wine-eight.vercel.app/"
       }
     },
+    {
+      title: "News Nexus",
+      description: "A News app to get updates on the go.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      image: "/images/news-app.png",
+      links: {
+        github: "https://vedantjn.github.io/News-App/",
+        live: "https://vedantjn.github.io/News-App/"
+      }
+    },
   ]
 
   return (
