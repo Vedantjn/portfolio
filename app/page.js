@@ -58,7 +58,7 @@ function Projects() {
       title: "Google Keep Clone",
       description: "A Google Keep clone created using ReactJS.",
       technologies: ["ReactJS"],
-      image: "/images/.png",
+      image: "/images/google-keep-clone.png",
       links: {
         github: "https://github.com/Vedantjn/google-keep-clone",
         live: "https://google-keep-clone-wine-eight.vercel.app/"
