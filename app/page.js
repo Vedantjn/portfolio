@@ -70,8 +70,8 @@ function Projects() {
       technologies: ["HTML", "CSS", "JavaScript"],
       image: "/images/news-app.png",
       links: {
-        github: "https://vedantjn.github.io/News-App/",
-        live: "https://github.com/Vedantjn/News-App"
+        github: "https://github.com/Vedantjn/News-App",
+        live: "https://vedantjn.github.io/News-App/"
       }
     },
   ]
