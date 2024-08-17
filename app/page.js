@@ -30,8 +30,8 @@ function Projects() {
       technologies: ["React", "Express", "Node.js", "MongoDB"],
       image: "/images/hospital-management.png",
       links: {
-        github: "https://github.com/yourgithub/hospital-management",
-        live: "https://hospital-management-demo.com"
+        github: "https://github.com/Vedantjn/hospital-management-system",
+        live: "https://hospital-management-system-vedantjn.netlify.app/"
       }
     },
     {
@@ -40,8 +40,8 @@ function Projects() {
       technologies: ["React", "Solidity", "Ethereum"],
       image: "/images/address-nft.png",
       links: {
-        github: "https://github.com/yourgithub/address-nft",
-        live: "https://address-nft-demo.com"
+        github: "https://github.com/Vedantjn/digitaldomi-assignment",
+        live: "https://digitaldomi-assignment.vercel.app/"
       }
     },
     {
@@ -50,10 +50,20 @@ function Projects() {
       technologies: ["HTML", "CSS", "JavaScript"],
       image: "/images/dice-game.png",
       links: {
-        github: "https://github.com/yourgithub/dice-game",
+        github: "https://github.com/Vedantjn/dice-game",
         live: "https://cute-sunflower-d33fbf.netlify.app/"
       }
-    }
+    },
+    {
+      title: "Google Keep Clone",
+      description: "A Google Keep clone created using ReactJS.",
+      technologies: ["ReactJS"],
+      image: "/images/.png",
+      links: {
+        github: "https://github.com/Vedantjn/google-keep-clone",
+        live: "https://google-keep-clone-wine-eight.vercel.app/"
+      }
+    },
   ]
 
   return (
