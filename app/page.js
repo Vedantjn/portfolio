@@ -71,7 +71,7 @@ function Projects() {
       image: "/images/news-app.png",
       links: {
         github: "https://vedantjn.github.io/News-App/",
-        live: "https://vedantjn.github.io/News-App/"
+        live: "https://github.com/Vedantjn/News-App"
       }
     },
   ]
