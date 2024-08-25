@@ -1,6 +1,6 @@
 'use client';
+
 import React, { useState } from 'react';
-// import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 const ContactItem = ({ icon, title, value, link }) => (
@@ -68,6 +68,7 @@ export default function Contact() {
     email: '',
     message: ''
   });
+  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -75,8 +76,24 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+    setSubmitStatus('Sending...');
+    fetch("https://formspree.io/f/mqazwjnl", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setFormData({ name: '', email: '', message: '' });
+        setSubmitStatus('Message sent successfully!');
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setSubmitStatus('Failed to send message. Please try again.');
+      });
   };
 
   return (
@@ -165,6 +182,11 @@ export default function Contact() {
               >
                 Send Message
               </button>
+              {submitStatus && (
+                <p className={`text-center mt-2 ${submitStatus.includes('success') ? 'text-green-400' : 'text-red-400'}`}>
+                  {submitStatus}
+                </p>
+              )}
             </form>
           </div>
         </div>
