@@ -96,14 +96,12 @@ export default function Contact() {
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center text-white">Contact Me</h2>
-        <div className="flex flex-col md:flex-row gap-8">
-          <CardSpotlight className="max-w-md mx-auto p-8">
-            <p className="text-xl font-bold relative z-20 mt-2 text-white">
-              Get in Touch
-            </p>
-            <div className="text-neutral-200 mt-4 relative z-20">
-              Feel free to reach out to me:
-              <ul className="list-none mt-4 space-y-4">
+        <div className="flex flex-col md:flex-row justify-center gap-8">
+          <CardSpotlight className="w-full md:w-1/2 max-w-md p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+            <div className="text-neutral-200">
+              <p className="mb-4">Feel free to reach out to me:</p>
+              <ul className="space-y-4">
                 <ContactItem 
                   icon={<EmailIcon />}
                   title="Email"
@@ -113,7 +111,7 @@ export default function Contact() {
                 <ContactItem 
                   icon={<LinkedInIcon />}
                   title="LinkedIn"
-                  value="https://www.linkedin.com/in/vedant-jain-192915194/"
+                  value="vedant-jain-192915194"
                   link="https://www.linkedin.com/in/vedant-jain-192915194/"
                 />
                 <ContactItem 
@@ -130,18 +128,16 @@ export default function Contact() {
                 />
               </ul>
             </div>
-            <p className="text-neutral-300 mt-6 relative z-20 text-sm">
-  I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
-</p>
+            <p className="text-neutral-300 mt-6 text-sm">
+              I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
+            </p>
           </CardSpotlight>
 
-          <CardSpotlight className="max-w-md mx-auto p-8">
-            <p className="text-xl font-bold relative z-20 mt-2 text-white">
-              Send a Message
-            </p>
-            <form onSubmit={handleSubmit} className="mt-4 relative z-20">
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-neutral-200">Name</label>
+          <CardSpotlight className="w-full md:w-1/2 max-w-md p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-neutral-200 mb-1">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -149,11 +145,11 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-neutral-200">Email</label>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-neutral-200 mb-1">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -161,11 +157,11 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-sm font-medium text-neutral-200">Message</label>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-neutral-200 mb-1">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -173,12 +169,12 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
               >
                 Send Message
               </button>
