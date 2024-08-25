@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { CardSpotlight } from "@/components/ui/card-spotlight";
+// import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 const ContactItem = ({ icon, title, value, link }) => (
@@ -75,21 +75,8 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://formspree.io/f/mqazwjnl", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    console.log('Form submitted:', formData);
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
@@ -97,7 +84,7 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center text-white">Contact Me</h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <CardSpotlight className="w-full md:w-1/2 max-w-md p-8">
+          <div className="w-full md:w-1/2 max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <div className="text-neutral-200">
               <p className="mb-4">Feel free to reach out to me:</p>
@@ -131,9 +118,9 @@ export default function Contact() {
             <p className="text-neutral-300 mt-6 text-sm">
               I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
             </p>
-          </CardSpotlight>
+          </div>
 
-          <CardSpotlight className="w-full md:w-1/2 max-w-md p-8">
+          <div className="w-full md:w-1/2 max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -145,7 +132,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-md bg-gray-700 border-gray-600 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -157,7 +144,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-md bg-gray-700 border-gray-600 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -169,7 +156,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-md bg-gray-800 border-gray-700 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-md bg-gray-700 border-gray-600 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
               <button
@@ -179,7 +166,7 @@ export default function Contact() {
                 Send Message
               </button>
             </form>
-          </CardSpotlight>
+          </div>
         </div>
       </div>
     </section>
