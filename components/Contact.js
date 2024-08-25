@@ -77,6 +77,12 @@ export default function Contact() {
                 value="github.com/Vedantjn"
                 link="https://github.com/Vedantjn"
               />
+              <ContactItem 
+                icon={<TwitterIcom />}
+                title="X"
+                value="x.com/vedantjn"
+                link="https://x.com/vedantjn"
+              />
             </ul>
           </div>
           <p className="text-neutral-300 mt-6 relative z-20 text-sm">
