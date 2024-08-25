@@ -101,41 +101,43 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center text-white">Contact Me</h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <div className="w-full md:w-1/2 max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="text-neutral-200">
-              <p className="mb-4">Feel free to reach out to me:</p>
-              <ul className="space-y-4">
-                <ContactItem 
-                  icon={<EmailIcon />}
-                  title="Email"
-                  value="vedant.jain.indore@gmail.com"
-                  link="mailto:vedant.jain.indore@gmail.com"
-                />
-                <ContactItem 
-                  icon={<LinkedInIcon />}
-                  title="LinkedIn"
-                  value="vedant-jain-192915194"
-                  link="https://www.linkedin.com/in/vedant-jain-192915194/"
-                />
-                <ContactItem 
-                  icon={<GitHubIcon />}
-                  title="GitHub"
-                  value="github.com/Vedantjn"
-                  link="https://github.com/Vedantjn"
-                />
-                <ContactItem 
-                  icon={<XIcon />}
-                  title="X"
-                  value="x.com/vedantjn"
-                  link="https://x.com/vedantjn"
-                />
-              </ul>
-            </div>
-            <p className="text-neutral-300 mt-6 text-sm">
-              I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
-            </p>
-          </div>
+        <div className="w-full md:w-1/2 max-w-md p-8 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between h-full">
+  <div>
+    <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+    <div className="text-neutral-200">
+      <p className="mb-6">Feel free to reach out to me:</p>
+      <ul className="space-y-6">
+        <ContactItem 
+          icon={<EmailIcon />}
+          title="Email"
+          value="vedant.jain.indore@gmail.com"
+          link="mailto:vedant.jain.indore@gmail.com"
+        />
+        <ContactItem 
+          icon={<LinkedInIcon />}
+          title="LinkedIn"
+          value="vedant-jain-192915194"
+          link="https://www.linkedin.com/in/vedant-jain-192915194/"
+        />
+        <ContactItem 
+          icon={<GitHubIcon />}
+          title="GitHub"
+          value="github.com/Vedantjn"
+          link="https://github.com/Vedantjn"
+        />
+        <ContactItem 
+          icon={<XIcon />}
+          title="X"
+          value="x.com/vedantjn"
+          link="https://x.com/vedantjn"
+        />
+      </ul>
+    </div>
+  </div>
+  <p className="text-neutral-300 mt-8 text-sm">
+    I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
+  </p>
+</div>
 
           <div className="w-full md:w-1/2 max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
