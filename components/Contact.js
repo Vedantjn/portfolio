@@ -47,6 +47,13 @@ const GitHubIcon = () => (
   </svg>
 );
 
+const XIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-blue-500 mt-1 flex-shrink-0">
+    <path d="M8.29 20c7.547 0 11.675-6.155 11.675-11.5v-.525A8.18 8.18 0 0 0 22 5.92a8.27 8.27 0 0 1-2.357.636A4.12 4.12 0 0 0 21.447 4.3a8.253 8.253 0 0 1-2.605.979A4.107 4.107 0 0 0 15.47 3a4.108 4.108 0 0 0-4.107 4.107c0 .323.036.637.106.939A11.666 11.666 0 0 1 3.098 4.4a4.107 4.107 0 0 0 1.27 5.478A4.081 4.081 0 0 1 2.8 9.34v.052A4.107 4.107 0 0 0 6.14 13.3a4.123 4.123 0 0 1-1.85.07 4.107 4.107 0 0 0 3.835 2.844A8.243 8.243 0 0 1 2 18.405a11.62 11.62 0 0 0 6.29 1.845"/>
+  </svg>
+);
+
+
 export default function Contact() {
   return (
     <section className="py-20 bg-gray-900">
@@ -78,7 +85,7 @@ export default function Contact() {
                 link="https://github.com/Vedantjn"
               />
               <ContactItem 
-                icon={<TwitterIcom />}
+                icon={<XIcon />}
                 title="X"
                 value="x.com/vedantjn"
                 link="https://x.com/vedantjn"
