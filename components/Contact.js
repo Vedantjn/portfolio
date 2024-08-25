@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { LinkPreview } from "@/components/ui/link-preview";
 
@@ -61,49 +61,129 @@ const XIcon = () => (
 );
 
 
-
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://formspree.io/f/mqazwjnl", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center text-white">Contact Me</h2>
-        <CardSpotlight className="max-w-2xl mx-auto p-8">
-          <p className="text-xl font-bold relative z-20 mt-2 text-white">
-            Get in Touch
-          </p>
-          <div className="text-neutral-200 mt-4 relative z-20">
-            Feel free to reach out to me:
-            <ul className="list-none mt-4 space-y-4">
-              <ContactItem 
-                icon={<EmailIcon />}
-                title="Email"
-                value="vedant.jain.indore@gmail.com"
-                link="mailto:vedant.jain.indore@gmail.com"
-              />
-              <ContactItem 
-                icon={<LinkedInIcon />}
-                title="LinkedIn"
-                value="https://www.linkedin.com/in/vedant-jain-192915194/"
-                link="https://www.linkedin.com/in/vedant-jain-192915194/"
-              />
-              <ContactItem 
-                icon={<GitHubIcon />}
-                title="GitHub"
-                value="github.com/Vedantjn"
-                link="https://github.com/Vedantjn"
-              />
-              <ContactItem 
-                icon={<XIcon />}
-                title="X"
-                value="x.com/vedantjn"
-                link="https://x.com/vedantjn"
-              />
-            </ul>
-          </div>
-          <p className="text-neutral-300 mt-6 relative z-20 text-sm">
-            I&apos;m always open to new opportunities and collaborations. Don&apos;t hesitate to reach out!
-          </p>
-        </CardSpotlight>
+        <div className="flex flex-col md:flex-row gap-8">
+          <CardSpotlight className="max-w-md mx-auto p-8">
+            <p className="text-xl font-bold relative z-20 mt-2 text-white">
+              Get in Touch
+            </p>
+            <div className="text-neutral-200 mt-4 relative z-20">
+              Feel free to reach out to me:
+              <ul className="list-none mt-4 space-y-4">
+                <ContactItem 
+                  icon={<EmailIcon />}
+                  title="Email"
+                  value="vedant.jain.indore@gmail.com"
+                  link="mailto:vedant.jain.indore@gmail.com"
+                />
+                <ContactItem 
+                  icon={<LinkedInIcon />}
+                  title="LinkedIn"
+                  value="https://www.linkedin.com/in/vedant-jain-192915194/"
+                  link="https://www.linkedin.com/in/vedant-jain-192915194/"
+                />
+                <ContactItem 
+                  icon={<GitHubIcon />}
+                  title="GitHub"
+                  value="github.com/Vedantjn"
+                  link="https://github.com/Vedantjn"
+                />
+                <ContactItem 
+                  icon={<XIcon />}
+                  title="X"
+                  value="x.com/vedantjn"
+                  link="https://x.com/vedantjn"
+                />
+              </ul>
+            </div>
+            <p className="text-neutral-300 mt-6 relative z-20 text-sm">
+              I'm always open to new opportunities and collaborations. Don't hesitate to reach out!
+            </p>
+          </CardSpotlight>
+
+          <CardSpotlight className="max-w-md mx-auto p-8">
+            <p className="text-xl font-bold relative z-20 mt-2 text-white">
+              Send a Message
+            </p>
+            <form onSubmit={handleSubmit} className="mt-4 relative z-20">
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-sm font-medium text-neutral-200">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-neutral-200">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="message" className="block text-sm font-medium text-neutral-200">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 block w-full rounded-md bg-gray-800 border-transparent focus:border-gray-500 focus:bg-gray-700 focus:ring-0 text-white"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Send Message
+              </button>
+            </form>
+          </CardSpotlight>
+        </div>
       </div>
     </section>
   );
