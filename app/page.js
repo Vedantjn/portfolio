@@ -76,7 +76,7 @@ function Projects() {
     },
     {
       title: "ChatGPT Clone",
-      description: "A ChatGPT clone created using React and OpenAI's API.",
+      description: "A ChatGPT clone created using React and OpenAI's API, will have to add new API key since free one has limits.",
       technologies: ["HTML", "CSS", "JavaScript"],
       image: "/images/chatgpt-clone.png",
       links: {
