@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { LinkPreview } from "@/components/ui/link-preview";
