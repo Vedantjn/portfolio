@@ -74,6 +74,16 @@ function Projects() {
         live: "https://vedantjn.github.io/News-App/"
       }
     },
+    {
+      title: "ChatGPT Clone",
+      description: "A ChatGPT clone created using React and OpenAI's API.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      image: "/images/chatgpt-clone.png",
+      links: {
+        github: "https://github.com/Vedantjn/chatgpt-clone",
+        live: "https://chatgpt-clone-sigma-ochre.vercel.app/"
+      }
+    },
   ]
 
   return (
