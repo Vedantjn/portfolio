@@ -9,13 +9,19 @@ const ContactItem = ({ icon, title, value, link }) => (
     <p className="text-white">
       <strong>{title}:</strong>{' '}
       {link ? (
-        <LinkPreview 
-          url={link} 
-          className="font-bold"
-          openInNewTab={true}
-        >
-          {value}
-        </LinkPreview>
+        link.startsWith('mailto:') ? (
+          <a href={link} className="font-bold hover:underline">
+            {value}
+          </a>
+        ) : (
+          <LinkPreview 
+            url={link} 
+            className="font-bold"
+            openInNewTab={true}
+          >
+            {value}
+          </LinkPreview>
+        )
       ) : (
         value
       )}

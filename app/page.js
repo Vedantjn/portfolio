@@ -45,6 +45,16 @@ function Projects() {
       }
     },
     {
+      title: "StableMax",
+      description: "NextJS-powered AI Image Generator for easy creation of unique artwork.",
+      technologies: ["NextJS", "TailwindCSS", "NeonDB", "Prisma"],
+      image: "/images/stablemax.png",
+      links: {
+        github: "https://github.com/Vedantjn/stablemax",
+        live: "https://stablemax-project-vedant.vercel.app/"
+      }
+    },
+    {
       title: "Dice Game",
       description: "Web-based dice game where users can earn points by guessing the roll.",
       technologies: ["HTML", "CSS", "JavaScript"],
