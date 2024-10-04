@@ -31,6 +31,9 @@ export function Skills() {
     { name: "NodeJS", image: "/images/skills/nodejs.png" },
     { name: "MongoDB", image: "/images/skills/mongodb.png" },
     { name: "PostgreSQL", image: "/images/skills/postgresql.png" },
+    { name: "Golang", image: "/images/skills/golang.png" },
+    { name: "Rust", image: "/images/skills/rust.png" },
+    { name: "VueJS", image: "/images/skills/vuejs.png" },
   ];
 
   return (
